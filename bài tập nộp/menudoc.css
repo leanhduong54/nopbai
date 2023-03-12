@@ -1,0 +1,20 @@
+.vertical-menu {
+    width: 800px; /* Độ rộng của menu */
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; /* Màu nền của từng mục */
+    color: #333; /* Màu chữ của từng mục */
+    display: block; /* Hiển thị mỗi mục trên một dòng riêng biệt */
+    padding: 12px; /* Khoảng cách từ chữ đến viền của mục */
+    text-decoration: none; /* Bỏ gạch chân dưới chữ */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc; /* Màu nền khi di chuột qua mục */
+  }
+  
+  .vertical-menu .active {
+    background-color: #4CAF50; /* Màu nền của mục được chọn */
+    color: #fff; /* Màu chữ của mục được chọn */
+  }

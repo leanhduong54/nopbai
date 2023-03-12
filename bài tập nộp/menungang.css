@@ -1,0 +1,24 @@
+horizontal-menu {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các mục menu */
+    justify-content: center; /* Căn giữa các mục menu */
+    align-items: center; /* Căn dọc các mục menu */
+    background-color: #f2f2f2; /* Màu nền của menu */
+  }
+  
+  .horizontal-menu a {
+    color: #333; /* Màu chữ của các mục menu */
+    text-align: center; /* Căn giữa chữ trong mỗi mục */
+    text-decoration: none; /* Bỏ gạch chân dưới chữ */
+    padding: 12px 16px; /* Khoảng cách giữa chữ và viền của mỗi mục */
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển động khi di chuột qua mỗi mục */
+  }
+  
+  .horizontal-menu a:hover {
+    background-color: #ddd; /* Màu nền khi di chuột qua mỗi mục */
+    
+  }
+  
+  .horizontal-menu .active {
+    background-color: #4CAF50; /* Màu nền của mục được chọn */
+    color: #fff; /* Màu chữ của mục được chọn */
+  }
