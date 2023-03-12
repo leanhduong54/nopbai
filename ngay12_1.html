@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. khai báo mảng ,nhập 5 phần tử cho mảng từ bàn phím
+        //khai báo mảng
+        let arrInt = [];
+        // nhập 5 giá trị từ bàn phím và thêm vào mảng
+        for (let i = 0; i < 5; i++) {
+         //nhập giá trị cho 1 phần tử- prompt   
+        let number = parseInt(prompt("nhập số nguyên thứ " + (i + 1 )));
+        //thêm giá trị vào mảng
+        arrInt.push(number);
+        }
+          
+        // 2.Hiển thị giá trị các phần tử của mảng: 5 phần tử
+        console.log("giá trị các phần tử trong mảng là:");
+        for (let i = 0; i < arrInt.length; i++){
+            //in giá trị phần tử
+            console.log(arrInt[i]);
+        }
+        //3.In các phần tử trong mảng có giá trị chẵn và tính tổng
+        //b1.khai báo biến chứa giá trị tổng các phần tử chẵn
+        let sum = 0;
+        //B2. Duyệt các phần tử trong mảng
+        console.log("Các phần tử có giá trị chẵn trong mảng:");
+        for (let i = 0; i < arrInt.length; i++) {
+            if (arrInt[i] % 2 == 0) {
+                console.log(arrInt[i]);
+                sum += arrInt[i];
+            }
+        }
+        console.log("Tổng các phần tử có giá trị chẵn là: ", sum);
+        //4.  In các phần tử có chỉ số lẻ và tính tổng
+        console.log("Các phần tử có chỉ số lẻ trong mảng là:");
+        sum = 0;
+        for (let i = 0; i< arrInt.length; i++) {
+            if (i % 2 !=0) {
+                console.log(arrInt[i]);
+                sum += arrInt[i];
+            }
+        }
+        console.log("Tổng các phần tử có chỉ số lẻ trong mảng là: ", sum);
+        //5. In các phần tử trong mảng là số nguyên tố
+        console.log("Các phần tử là số nguyên tố trong mảng:");
+        for ( let i = 0; i< arrInt.length; i++) {
+            //xét arrInt i - có phải là số nguyên tố hay không?
+            let checkNT = true;
+            for(let j = 2; j< arrInt[i]; j++) {
+                if ( arrInt[i] % j ==0) {
+                // Chứng tỏ j là ước của arrInt[i]--> arrInt ko phải là số nguyên tố 
+                  checkNT = false;
+                  break;   
+                }
+            }
+            if (arrInt[i] < 2){
+                checkNT = false;
+            }
+            if (checkNT) {
+                console.log(arrInt[i]);
+            }
+        }
+        // 6. In phần tử có giá trị max, min
+        let max = arrInt[0];
+        let min = arrInt[0];
+        for (let i =1;i <arrInt.length; i++) {
+            if (arrInt[i] > max) {
+                max = arrInt[i];
+            }
+            if (arrInt[i] < min) {
+                min = arrInt[i];
+            }
+        }
+        console.log("Giá trị max trong mảng là: ", max);
+        console.log("Giá trị min trong mảng là: ", min);
+        // 7. Sắp xếp mảng giảm dần và in giá trị các phần tử mảng sau khi sắp xếp
+        for (let i = 0; i< arrInt.length; i++) {
+          for ( let j = i + 1; j < arrInt.length; j++) {
+            if (arrInt[j] > arrInt[i]) {
+                //đổi chỗ 2 phần tử
+                 let temp = arrInt[j];
+                 arrInt[j] = arrInt[i];
+                 arrInt[i] = temp;
+            }
+          }
+        }
+        console.log("Mảng sau khi sắp xếp giảm dần:");
+        console.log(arrInt);
+        arrInt.sort((a,b) => a-b);
+        console.log("Mảng sau khi sắp xếp tăng dần: ");
+        console.log(arrInt);
+        // 8. Nhập vào một số nguyên và thống kê có bao nhiêu phần tử có giá trị như vậy
+        let numberFind = parseInt(prompt("Nhập vào giá trị cần tìm kiếm: "));
+        let cnt = 0;
+        for (let i =0; i< arrInt.length; i++) {
+            if (arrInt[i] == numberFind) {
+                cnt++;
+            }
+        }
+        console.log("Số phần tử trong mảng có giá trị = giá trị nhập: ", cnt);
+
+
+
+        
+        
+
+
+    </script>
+    
+</body>
+</html>
