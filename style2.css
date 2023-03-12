@@ -1,0 +1,43 @@
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content_left{
+            background-color: rgb(22, 143, 143);
+            width: 40%;
+            height: 500px;
+            float: left;
+        }
+        
+        .content_right {
+            width: 55%;
+            float: left;
+            padding-left: 5%;
+        }       
+
+        .line{
+            width: 70px;
+            height: 5px;
+            background-color: aqua;
+        }
+
+        .text{
+            padding: 25px 0px;
+        }
+
+        .title_list{
+            padding-bottom: 15px;
+        }
+
+        ul li{
+            list-style: none;
+            padding: 5px 0px;
+        }
+
+        ul{
+            float: left;
+            margin-right: 25px;
+        }
